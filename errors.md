@@ -1,40 +1,3 @@
-## **Future methods Error Handling**
-
-``` 
-Future<int> myFunc(){
-    ....
-    ....
-}
-```
-
-Future functions can comes with value, empty or error.
-
-```
-myFunc().then((val){
-
-    .... //do something here
-    ....
-
-}).catchError(errorHandler);
-
-```
-
->Here ***`catchError()`*** callback gets fired if myFunc() comes with an error
-
->if within the ***`then()`***  method, programmer is performing any operation that can throw error, then that error can also be handled at ***`catchError()`*** callback
-
-```
-myFunc().then(successCallback, onError: (e) {
-
-  handleError(e); // Original error.
-
-  anotherFuncThatThrows(); // Oops, new error.
-
-}).catchError(handleError);
-```
-
->onError callback within ***`then()`*** will handle the error that comes from ***myFunc()***
-
 ## **Problems with type check**
 
 - ***A variable is statically known to be some supertype, but the code assumes a subtype***
@@ -191,6 +154,43 @@ Example =>
 int? a=int.tryParse("43s")
 ```
 here the value of a will be null
+
+## **Future methods Error Handling**
+
+``` 
+Future<int> myFunc(){
+    ....
+    ....
+}
+```
+
+Future functions can comes with value, empty or error.
+
+```
+myFunc().then((val){
+
+    .... //do something here
+    ....
+
+}).catchError(errorHandler);
+
+```
+
+>Here ***`catchError()`*** callback gets fired if myFunc() comes with an error
+
+>if within the ***`then()`***  method, programmer is performing any operation that can throw error, then that error can also be handled at ***`catchError()`*** callback
+
+```
+myFunc().then(successCallback, onError: (e) {
+
+  handleError(e); // Original error.
+
+  anotherFuncThatThrows(); // Oops, new error.
+
+}).catchError(handleError);
+```
+
+>onError callback within ***`then()`*** will handle the error that comes from ***myFunc()***
 
 ## **Try-Catch**
 
