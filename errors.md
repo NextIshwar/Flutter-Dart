@@ -119,7 +119,7 @@ Example =>
   print(map['c']);
 }
  ```
- >In the above expample the analyser ifers the map as a Map<String, int> but the code assumes it as Map<String, dynamic> or Map<String, num> due to which the compiler throws an error as the compiler was expecting Map<String, int> but the programmer provider Map<String, dynamic> or Map<String, num>
+ >In the above expample the analyser ifers the map as a Map<String, int> but the code assumes it as Map<String, dynamic> or Map<String, num> due to which the compiler throws an error as the compiler was expecting Map<String, int> but the programmer provides Map<String, dynamic> or Map<String, num>
 
  >To fix this issue, the programmer needs to explicitly specify the type of the map
 
