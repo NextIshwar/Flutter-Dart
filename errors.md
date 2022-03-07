@@ -105,6 +105,7 @@ Example =>
  Expample =>
 
  ```
+ //finding an element that doesn't exist
  void main() {
       List<int> numbers = [1, 2, 3];
       int result = numbers.firstWhere(
@@ -120,14 +121,23 @@ Example =>
     }
  ```
 
- >The above example will throw and Exception `Bad state: No element` as the analyser tries to find the number 23 but it does not gets the number.
+ ```
+  //finding first element from an empty list
+  void main(){
+    List<int> numbers = [];
+    var result=numbers.first;
+    print(result);
+  }
+ ```
 
- To solve this issue, programmer must pass optional argumet orElse of the ***`firstWhere()`*** 
+ >The above examples will throw an Exception `Bad state: No element` as the analyser tries to get the data but it could not find it.
+
+ To solve this issue, programmers must pass optional argumet orElse of the ***`firstWhere()`*** and in case of empty list they need to use `firstOrNull` extension method of `collection` package
 
  Example => 
 
  ```
- List<int> numbers = [1, 2, 3];
+      List<int> numbers = [1, 2, 3];
       int result = numbers.firstWhere(
         (val) {
           if (val == 23) {
@@ -140,6 +150,14 @@ Example =>
           return -1;
         }
       );
+      print(result);
+ ```
+
+ ```
+  import 'package:collection/collection.dart';
+
+      List<int> numbers = [];
+      int result = numbers.firstOrNull();
       print(result);
  ```
 
