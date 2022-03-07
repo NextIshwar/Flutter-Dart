@@ -1,3 +1,4 @@
+![alt text](https://storage.googleapis.com/cms-storage-bucket/70760bf1e88b184bb1bc.png)
 ## **Problems with type check**
 
 - ***A variable is statically known to be some supertype, but the code assumes a subtype***
