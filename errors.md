@@ -63,7 +63,7 @@ class Subclass extends Superclass {
 ```
 >In the above example, Subclass extends Superclass<T> but doesn’t specify a type argument. The analyzer infers Subclass<dynamic>, which results in an invalid override error on method(int).
 
->To fix this error, programmers need to provide type
+>To fix this error, programmers need to provide the type
  Example => 
 
  ```
@@ -86,7 +86,7 @@ Example =>
   print(map['c']);
 }
  ```
- >In the above expample the analyser ifers the map as a Map<String, int> but the code assumes it as Map<String, dynamic> or Map<String, num> due to which the compiler throws an error as the compiler was expecting Map<String, int> but the programmer provides Map<String, dynamic> or Map<String, num>
+ >In the above example the analyser infers the map as a Map<String, int> but the code assumes it as Map<String, dynamic> or Map<String, num> due to which the compiler throws an error as the compiler was expecting Map<String, int> but the programmer provides Map<String, dynamic> or Map<String, num>
 
  >To fix this issue, the programmer needs to explicitly specify the type of the map
 
@@ -132,7 +132,7 @@ Example =>
 
  >The above examples will throw an Exception `Bad state: No element` as the analyser tries to get the data but it could not find it.
 
- To solve this issue, programmers must pass optional argumet orElse of the ***`firstWhere()`*** and in case of empty list they need to use `firstOrNull` extension method of `collection` package
+ To solve this issue, programmers must pass optional argument orElse of the ***`firstWhere()`*** and in case of an empty list they need to use `firstOrNull` extension method of `collection` package
 
  Example => 
 
@@ -167,9 +167,9 @@ Example =>
 ```
 int a=int.parse("43s");
 ```
-The above exapmple will throw `FormatException`
+The above example will throw `FormatException`
 
->To fix this programmers should use ***`tryParse()`*** which will return null in the case where given string cannot be parsed.
+>To fix this programmers should use ***`tryParse()`*** which will return null in the case where the given string cannot be parsed.
 
 Example =>
 ```
@@ -186,7 +186,7 @@ Future<int> myFunc(){
 }
 ```
 
-Future functions can comes with value, empty or error.
+Future functions can come with value, empty or error.
 
 ```
 myFunc().then((val){
@@ -200,7 +200,7 @@ myFunc().then((val){
 
 >Here ***`catchError()`*** callback gets fired if myFunc() comes with an error
 
->if within the ***`then()`***  method, programmer is performing any operation that can throw error, then that error can also be handled at ***`catchError()`*** callback
+>if within the ***`then()`***  method, programmer is performing any operation that can throw an error, then that error can also be handled at ***`catchError()`*** callback
 
 ```
 myFunc().then(successCallback, onError: (e) {
@@ -226,7 +226,7 @@ foo(List<int> arr){
 }
 ```
 
->Here in the above code, the function ***foo()*** can throw `Index out of range` exception. Now to prevent unwanted exception and to make smooth exceution of the program, programmers need to handle the exception. To handle the exception, the statement(s) that can throw exception should be wrapped inside `try-catch` block
+>Here in the above code, the function ***foo()*** can throw `Index out of range` exception. Now to prevent unwanted exception and to make smooth execution of the program, programmers need to handle the exception. To handle the exception, the statement(s) that can throw an exception(s) should be wrapped inside `try-catch` block
 
 Example =>
 
@@ -280,7 +280,7 @@ foo(List<int> arr){
   ```
 >In the above example, since the `Row` widget doesn't have any size constraint the `Column` widget inside the Row will try to expand as much as possible, causing it to throw an error.
 
->To fix this issue, programmers need to give size constraint. To do this, the programmers can give fixed height to `SizedBox` widget or they can wrap the Column widget inside an `Expanded` widget or Column widget can be Wrapped inside a `Flexible` widget
+>To fix this issue, programmers need to give size constraints. To do this, the programmers can give fixed height to the `SizedBox` widget or they can wrap the Column widget inside an `Expanded` widget or Column widget can be Wrapped inside a `Flexible` widget
 
 - **RenderBox was not laid out Error**
  
