@@ -5,7 +5,7 @@
 Example => 
 ```
 void main() {
-  dynamic _person1=Person(1,"Rahul");
+  var _person1=getPerson();
   var _person=_person1;
 
   print(_person.toName);
@@ -23,6 +23,9 @@ extension Name on Person{
   String get toName{
     return this.name;
   }
+}
+getPerson(){
+  return Person(1,"Rahul");
 }
 ```
 
