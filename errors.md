@@ -1,4 +1,12 @@
 ![alt text](https://storage.googleapis.com/cms-storage-bucket/70760bf1e88b184bb1bc.png)
+
+**This documnet covers the following errors**
+- [**Problems with type check**](#problems-with-type-check)
+- [**No Element found error**](#no-element-found-error)
+- [**Type parsing**](#type-parsing)
+- [**Future methods Error Handling**](#future-methods-error-handling)
+- [**Try-Catch**](#try-catch)
+- [**Common Flutter Errors**](#common-flutter-errors)
 ## **Problems with type check**
 
 - ***A variable is statically known to be some supertype, but the code assumes a subtype***
@@ -161,7 +169,7 @@ Example =>
       print(result);
  ```
 
-  - ***Type parsing***
+ ## **Type parsing**
   
 Example =>
 ```
