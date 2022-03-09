@@ -2,6 +2,21 @@
 
 ## **Flutter testing**
 
+> Software testing is a crucial component of software product development because it improves consistency and performance. The main benefit of testing is the identification and subsequent removal of the errors. However, testing also helps developers and testers to compare actual and expected results in order to improve quality. If the software production happens without testing it, it could be useless or sometimes dangerous for customers.
+> Automated Testing in FLutter comprises of three categories
+> - #### [**Unit Test**](#unit-tests)
+> - #### [**Widget Test**]()
+> - #### [**Integration Test**]()
+
+## **Unit Tests**
+> A unit test tests a single function, method, or class. The goal of a unit test is to verify the correctness of a unit of logic under a variety of conditions. External dependencies of the unit under test are generally mocked out. Unit tests generally don’t read from or write to disk, render to screen, or receive user actions from outside the process running the test.<br>For more info visit [Introduction to unit testing]("https://docs.flutter.dev/cookbook/testing/unit/introduction")
+
+## **Widget Tests**
+> A widget test (in other UI frameworks referred to as component test) tests a single widget. The goal of a widget test is to verify that the widget’s UI looks and interacts as expected. Testing a widget involves multiple classes and requires a test environment that provides the appropriate widget lifecycle context.<br>For more infor visit [Introduction to widget testing]("https://docs.flutter.dev/cookbook/testing/widget/introduction)
+
+## **Integration Tests**
+> An integration test tests a complete app or a large part of an app. The goal of an integration test is to verify that all the widgets and services being tested work together as expected. Furthermore, you can use integration tests to verify your app’s performance.<br> for more infor visit [Introduction to Integration testing]("https://docs.flutter.dev/testing/integration-tests")
+
 **Best Practices for widget testing**
 - Test for what the users see, not implementation details. So, generally, aim to find widgets by a string or icon, not a key or a widget type. There are exceptions, but most of your tests should test for strings and icons.
   ```
