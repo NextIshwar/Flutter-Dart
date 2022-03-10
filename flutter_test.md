@@ -5,8 +5,8 @@
 > Software testing is a crucial component of software product development because it improves consistency and performance. The main benefit of testing is the identification and subsequent removal of the errors. However, testing also helps developers and testers to compare actual and expected results in order to improve quality. If the software production happens without testing it, it could be useless or sometimes dangerous for customers.
 > Automated Testing in FLutter comprises of three categories
 > - #### [**Unit Test**](#unit-tests)
-> - #### [**Widget Test**]()
-> - #### [**Integration Test**]()
+> - #### [**Widget Test**](#widget-tests)
+> - #### [**Integration Test**](#integration-tests)
 
 ## **Unit Tests**
 > A unit test tests a single function, method, or class. The goal of a unit test is to verify the correctness of a unit of logic under a variety of conditions. External dependencies of the unit under test are generally mocked out. Unit tests generally don’t read from or write to disk, render to screen, or receive user actions from outside the process running the test.<br>For more info visit [Introduction to unit testing](https://docs.flutter.dev/cookbook/testing/unit/introduction)
