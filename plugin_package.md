@@ -112,3 +112,32 @@ These are the following command to publish plugin into https://pub.dartlang.org/
 flutter packages pub publish--dry-run
 flutter packages pub publish
 ```
+
+## **Package**
+>Packages enable the creation of modular code that can be shared easily. A minimal package consists of the following:
+
+- pubspec.yaml
+A metadata file that declares the package name, version, author, and so on.
+lib
+- The lib directory contains the public code in the package, minimally a single `package-name.dart` file.
+
+### **Types of Flutter packages**
+- **Dart packages**
+
+
+> General packages written in Dart, for example the path package. Some of these might contain Flutter specific functionality and thus have a dependency on the Flutter framework, restricting their use to Flutter only.
+
+- **Plugin packages**
+
+> A specialized Dart package that contains an API written in Dart code combined with one or more platform-specific implementations.
+Plugin packages can be written for Android (using Kotlin or Java), iOS (using Swift or Objective-C), web, macOS, Windows, or Linux, or any combination thereof.
+
+## **Command to create a package**
+```
+flutter create --template=package hello
+
+```
+>For pure Dart packages, simply add the functionality inside the main `lib/package name.dart` file, or in several files in the lib directory
+
+For plugin package you can visit the below link.
+[Developing plugin packages](https://docs.flutter.dev/development/packages-and-plugins/developing-packages#plugin)
