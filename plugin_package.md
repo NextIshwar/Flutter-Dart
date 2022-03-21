@@ -140,4 +140,5 @@ flutter create --template=package hello
 >For pure Dart packages, simply add the functionality inside the main `lib/package name.dart` file, or in several files in the lib directory
 
 For plugin package you can visit the below link.
+
 [Developing plugin packages](https://docs.flutter.dev/development/packages-and-plugins/developing-packages#plugin)
