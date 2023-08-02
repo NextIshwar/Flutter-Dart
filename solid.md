@@ -73,12 +73,12 @@ class AreaCalculator {
 
 - To use the AreaCalculator class, you will need to instantiate the class and pass in an array of shapes and display the output at the bottom of the page.
 
-Here is an example with a collection of three shapes:
+- Here is an example with a collection of three shapes:
 
 
-a circle with a radius of 2
-a square with a length of 5
-a second square with a length of 6
+    - a circle with a radius of 2
+    - a square with a length of 5
+    - a second square with a length of 6
 
 ```
 List<dynamic> shapes = [
@@ -123,7 +123,7 @@ class SumCalculatorOutputter {
 }
 ```
 
-- The SumCalculatorOutputter class would work like this:
+The SumCalculatorOutputter class would work like this:
 
 ```
 List<dynamic> shapes = [
@@ -192,7 +192,7 @@ class Square {
 }
 ```
 
-- And here is the area method defined in Circle:
+And here is the area method defined in Circle:
 
 ```
 class Circle {
@@ -207,7 +207,7 @@ class Circle {
 }
 ```
 
-- The sum method for AreaCalculator can then be rewritten as:
+The sum method for AreaCalculator can then be rewritten as:
 
 ```
 class AreaCalculator {
@@ -240,9 +240,9 @@ abstract class ShapeInterface {
 }
 ```
 
-- Modify your shape classes to implement the ShapeInterface.
+Modify your shape classes to implement the ShapeInterface.
 
-- Here is the update to Square:
+Here is the update to Square:
 
 ```
 class Square implements ShapeInterface
@@ -260,7 +260,7 @@ class Circle implements ShapeInterface
 }
 ```
 
-- In the sum method for AreaCalculator, to avoid runtime exceptions because of the type, we can change
+In the sum method for AreaCalculator, to avoid runtime exceptions because of the type, we can change
 List<dynamic> to List<ShapeInterface>
 
 ```
@@ -300,9 +300,9 @@ class VolumeCalculator extends AreaCalculator
 }
 ```
 
-- The summedData can be a float, double, or integer.
+The summedData can be a float, double, or integer.
 
-- Recall that the SumCalculatorOutputter class. If you tried to run an example like this:
+Recall that the SumCalculatorOutputter class. If you tried to run an example like this:
 
 ```
 areas =  AreaCalculator(shapes);
